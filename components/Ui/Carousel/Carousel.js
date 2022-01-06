@@ -52,7 +52,7 @@ const Carousel = () => {
   
   useEffect(()=>{
     carouselData.map((item)=>{
-      setItems(perv=> [...perv,(<CarouselItem imgSrc={item.imgSrc} link={item.link} />)])
+      setItems(perv=> [...perv,(<CarouselItem key={Math.random()} imgSrc={item.imgSrc} link={item.link} />)])
       })
   },[])
 
