@@ -7,7 +7,7 @@ import Link  from 'next/link';
 import { motion } from "framer-motion";
 import  Head  from "next/head";
 
-const aboutUs = () => {
+const AboutUs = () => {
   const consoler = () => {
     return (
     <Card className="bg-gray-50 shadow-lg shadow-gray-200/50 flex">
@@ -56,4 +56,4 @@ const variants = {
   );
 };
 
-export default aboutUs;
+export default AboutUs;

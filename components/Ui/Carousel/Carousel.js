@@ -111,7 +111,7 @@ const DotsBar = () =>{
          <CarouselButton onClick={pervSlide} direction="perv"/>
         <CarouselButton onClick={nextSlide} direction="next"></CarouselButton>
       </div>
-    </div>,
+    </div>
   );
 };
 
