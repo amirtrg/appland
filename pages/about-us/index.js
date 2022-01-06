@@ -1,0 +1,59 @@
+import Layout from "./../../components/Layout/Layout";
+import Container from "./../../components/Ui/Container/Container";
+import useAboutUs from "./../../utils/Hooks/useAboutUs";
+import Card from "./../../components/Ui/Card/Card";
+import Button from './../../components/Ui/Button/Button';
+import Link  from 'next/link';
+import { motion } from "framer-motion";
+import  Head  from "next/head";
+
+const aboutUs = () => {
+  const consoler = () => {
+    return (
+    <Card className="bg-gray-50 shadow-lg shadow-gray-200/50 flex">
+        <Link href="/">
+            <Button type="primary">بازگشت به صفحه اصلی</Button>
+        </Link>
+    </Card>)
+  };
+
+  const { render } = useAboutUs({ data: [], func: consoler });
+const variants = {
+  hidden:{
+    opacity: 0,
+    x:"100vw"
+  },
+  visible:{
+    opacity: 1,
+
+    x:0,
+    transition: {
+      type:"spring",
+      duration:2,
+      mass:2,
+      damping:10
+    }
+  }
+}
+  return (
+    <>
+<Head>
+  <title>
+    درباره ما
+  </title>
+  <meta name="theme-color" content="#fefefe" />
+</Head>
+    <Layout footer={false}>
+      <Container>
+        <motion.h1 variants={variants} initial="hidden" animate="visible"
+        className="font-bold text-3xl">درباره ما</motion.h1>
+        <motion.div variants={variants} initial="hidden" animate="visible">
+        {render}
+        </motion.div>
+      </Container>
+    </Layout>
+    </>
+  );
+};
+
+export default aboutUs;
