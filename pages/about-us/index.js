@@ -21,17 +21,11 @@ const AboutUs = () => {
 const variants = {
   hidden:{
     opacity: 0,
-    x:"100vw"
   },
   visible:{
     opacity: 1,
-
-    x:0,
     transition: {
-      type:"spring",
-      duration:2,
-      mass:2,
-      damping:10
+      duration:2
     }
   }
 }
