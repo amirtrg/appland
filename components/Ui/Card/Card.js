@@ -1,13 +1,14 @@
 
-const Card = ({children,className,onMouseEnter,onMouseLeave}) => {
+import { animate, motion } from 'framer-motion';
+const Card = ({children,className,onMouseEnter,onMouseLeave,initial,animate}) => {
     const styles = " m-4 p-4 rounded-2xl "
     return (
-        <div className={className ? `${styles} ${className}` : `${styles}` } 
+        <motion.div initial={initial} animate={animate} className={className ? `${styles} ${className}` : `${styles}` } 
         onMouseEnter={onMouseEnter&&onMouseEnter}
         onMouseLeave={onMouseLeave&&onMouseLeave}
         >
             {children}
-        </div>
+        </motion.div>
     );
 }
 
