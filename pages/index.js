@@ -16,8 +16,8 @@ export default function Home() {
         {/* <Carousel /> */}
         <Banner title="قوی تر و زیبا تر از همیشه" />
         <Container>
-          <h1 className="text-4xl pt-8 pb-4">جدید ترین محصولات</h1>
-          <div className="grid sm:grid-cols-2 md:grid-cols-3  w-full lg:gap-4 gap-1 ">
+          <h1 className="text-4xl pt-8 pb-4 dark:text-white">جدید ترین محصولات</h1>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 w-full lg:gap-4 xl:gap-2 gap-2 ">
             <Product />
             <Product />
             <Product />

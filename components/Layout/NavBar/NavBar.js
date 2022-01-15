@@ -12,12 +12,12 @@ const Navbar = () => {
     {isMenuOpen&&<MenuModal onExit={()=>{setIsMenuOpen(false)}} />}
       
 
-    <Button className="sm:hidden py-0 px-1" type="secondary" onClick={()=>{setIsMenuOpen(true)}}>
-      <span className='w-6 my-0.5 h-0.5 block rounded-sm bg-black '></span>
-      <span className='w-6 my-0.5 h-0.5 block rounded-sm bg-black/70 '></span>
-      <span className='w-6 my-0.5 h-0.5 block rounded-sm bg-black/50 '></span>
+    <Button className="sm:hidden py-0 px-1 flex flex-col gap-1 dark:bg-black" type="secondary" onClick={()=>{setIsMenuOpen(true)}}>
+      <span className='w-6 h-0.5 block rounded-sm bg-black dark:bg-white'></span>
+      <span className='w-6 h-0.5 block rounded-sm bg-black/70 dark:bg-white/70'></span>
+      <span className='w-6 h-0.5 block rounded-sm bg-black/50 dark:bg-white/50'></span>
     </Button>
-      <h1 className="pl-4 text-2xl font-bold" style={{fontFamily:"lalezar"}}>
+      <h1 className="pl-4 text-2xl font-bold dark:text-white" style={{fontFamily:"lalezar"}}>
         اپلند
       </h1>
 

@@ -5,7 +5,7 @@ import NavbarItem from './NabarItem';
 export default function MenuModal({onExit}) {
   return (
     <Modal className="flex flex-col" onExit={onExit}>
-      <h1 className="text-2xl border-b border-black/50  pb-2">
+      <h1 className="text-2xl border-b border-black/50 dark:border-white pb-2">
         گالری نصف جهان
       </h1>
       <NavbarItem href="/" title="صفحه اصلی" />

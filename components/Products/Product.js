@@ -12,7 +12,7 @@ const Product = () => {
   let ParentAnimate
   hidden ? ParentAnimate={scale:0.25}:ParentAnimate={scale:1}
   return (
-    <Card className=" border border-[#ccc] relative m-0 my-0 mx-0 w-full flex flex-col gap-4 aspect-auto overflow-hidden bg-white" 
+    <Card className=" border border-[#ccc] relative m-0 my-0 mx-0 w-full flex flex-col gap-4 aspect-auto overflow-hidden bg-white dark:border-[#222] dark:bg-[#222] dark:text-white" 
     onMouseEnter={ ()=>setHidden(false)}
             onMouseLeave={()=>setHidden(true)}>
       <div className="flex items-center justify-between flex-wrap">
@@ -30,8 +30,9 @@ animate={ParentAnimate}
           <h1 className="text-2xl font-extralight">آیفون 13 پرو مکس</h1>
         </span>
 
-        <p className="text-black/40 text-base ">Apple</p>
+        <p className="text-black/40 dark:text-white/40 text-base ">Apple</p>
       </div>
+      <div className="grid items-center aspect-square bg-white rounded-xl dark:opacity-80 ">
       <Image
         src="/Images/products/iphone13promax.jpg"
         className="object-scale-down"
@@ -41,7 +42,9 @@ animate={ParentAnimate}
         alt="product image"
       />
 
-      <p className="text-black/50 text-sm leading-loose farsiDigit">
+      </div>
+
+      <p className="text-black/50 dark:text-white/40 text-sm leading-loose farsiDigit">
         حافظه داخلی : از 128 گیگابایت تا 2 ترابایت
         <br />
         حافظه رم : از 6 گیگابایت تا 8 گیگابایت

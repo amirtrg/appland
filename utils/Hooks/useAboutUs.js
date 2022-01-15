@@ -10,7 +10,7 @@ const useAboutUs = (props) => {
             )
         }else if(props.data.length===0){
             render = (
-                <Card className="bg-white shadow-lg">چیزی یافت نشد</Card>
+                <Card className="bg-white shadow-lg dark:bg-[#222] text-white">چیزی یافت نشد</Card>
             )
 
     }
