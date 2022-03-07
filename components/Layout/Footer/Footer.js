@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="absolute bottom-0 left-0 right-0 bg-gradient-to-tr from-indigo-900 to-indigo-800 my-0 mx-0 shadow-none p-4 text-white dark:to-black dark:from-slate-900">
+    <footer className="absolute bottom-0 left-0 right-0 bg-gradient-to-tr from-indigo-900 to-indigo-800 my-0 mx-0 shadow-none p-4 text-white dark:to-transparent dark:from-slate-900 dark:bg-gradient-to-t">
       <div className=" m-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4  lg:w-3/4 text-center">
         <div className="text-right">
           <h3 className="text-2xl">

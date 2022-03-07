@@ -5,7 +5,7 @@ import productPic from "./../../public/Images/products/iphone13promax.jpg";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-const Product = () => {
+const Product = ({isNew,title,brand,imgSrc,price,ram,memory}) => {
   const [ hidden, setHidden ] = useState(true);
   let animate
   hidden ? animate = {opacity:0} : animate ={opacity:1}
@@ -17,39 +17,36 @@ const Product = () => {
             onMouseLeave={()=>setHidden(true)}>
       <div className="flex items-center justify-between flex-wrap">
         <span className="flex items-center gap-2">
-          <motion.span
-animate={ParentAnimate}
-
+          {isNew&&<motion.span
+            animate={ParentAnimate}
             className={`text-xs flex justify-center rounded-full p-1 bg-red-600 ${hidden&&"animate-pulse "}`}
-          
           >
             <motion.span animate={animate}
              className="text-white"
             >جدید</motion.span>
-          </motion.span>
-          <h1 className="text-2xl font-extralight">آیفون 13 پرو مکس</h1>
+          </motion.span>}
+          <h1 className="text-2xl font-extralight">{title}</h1>
         </span>
 
-        <p className="text-black/40 dark:text-white/40 text-base ">Apple</p>
+        <p className="text-black/40 dark:text-white/40 text-base capitalize">{brand}</p>
       </div>
       <div className="grid items-center aspect-square bg-white rounded-xl dark:opacity-80 ">
       <Image
-        src="/Images/products/iphone13promax.jpg"
+        src={imgSrc}
         className="object-scale-down"
         layout="intrinsic"
         width={300}
         height={300}
         alt="product image"
       />
-
       </div>
 
       <p className="text-black/50 dark:text-white/40 text-sm leading-loose farsiDigit">
-        حافظه داخلی : از 128 گیگابایت تا 2 ترابایت
+        حافظه داخلی : از {memory.min} گیگابایت تا {memory.max} ترابایت
         <br />
-        حافظه رم : از 6 گیگابایت تا 8 گیگابایت
+        حافظه رم : از {ram.min} گیگابایت تا {ram.max} گیگابایت
         <br />
-        شروع قیمت از 38.000.000 تومان
+        شروع قیمت از {price.min} تومان
       </p>
       <Button type="primary" className="my-0 mx-0">
         شروع انتخاب

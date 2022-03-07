@@ -36,7 +36,7 @@ const AboutUs = () => {
         <title>درباره ما</title>
         <meta name="theme-color" content="#fefefe" />
       </Head>
-      <Layout footer={false}>
+      <Layout>
         <Container>
           <motion.h1
             variants={variants}
