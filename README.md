@@ -29,3 +29,4 @@ so if you want to check out the project just tab on  [appland](http://appland.ve
  > login , signup , buy product , ...
  - [x] about us page
  - [ ] terms page
+-[x] dark and light mode
