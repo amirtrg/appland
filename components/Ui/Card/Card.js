@@ -5,9 +5,8 @@ const Card = ({
   onMouseEnter,
   onMouseLeave,
   initial,
-  animate,
-    
-}) => {
+  animate,  
+},props) => {
    const styles = "m-4 p-4 rounded-2xl bg-white text-base"
   // let finalStyles = {
   //   padding: "p-4",
@@ -26,6 +25,7 @@ const Card = ({
       // className={Object.values(finalStyles).join(" ")}
       onMouseEnter={onMouseEnter && onMouseEnter}
       onMouseLeave={onMouseLeave && onMouseLeave}
+      {...props}
     >
       {children}
     </motion.div>
