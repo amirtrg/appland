@@ -13,6 +13,8 @@ so if you want to check out the project just tab on  [appland](http://appland.ve
 - [ ] redux (soon)
 - [ ] mongodb (soon)
 - [ ] typeScript (soon)
+- [ ] story book (soon)
+- [ ] testing (soon)
 ---
 ### fetures and goals
   some of my goals and features i want to add to this project :
