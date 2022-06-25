@@ -11,7 +11,7 @@ const AboutUs = () => {
   const consoler = () => {
     return (
       <Card className="bg-gray-50 shadow-lg shadow-gray-200/50 flex dark:bg-[#222] dark:shadow-none">
-        <Link href="/">
+        <Link href="/" passHref>
           <Button type="primary">بازگشت به صفحه اصلی</Button>
         </Link>
       </Card>
